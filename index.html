@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <nav>
+        <div class="logo"></div>
+            
+            <ul id="menu-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">My Profile</a></li>
+                <li><a href="">Today</a></li>
+                <li><a href="">Completed</a></li>
+            </ul>
+            <div class="icon">
+                <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+
+            
+           
+            </div>
+    </nav> 
+    <form id="form" action="">
+        <input type="text" id="title" placeholder="Title"> 
+        <input type="text" id="desc" placeholder="description">
+        <input type="date" id="date" placeholder="due date">
+        <select id="priority"  name="priority">
+         <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+       </select>
+         <input type="submit" id="submit">
+        
+    </form>
+  
+
+
+    <footer>
+        <button id="inbox" onclick="toggleForm()" ;>inbox</button>
+        <button id="upcoming" onclick="aiIntegration()">upcoming</button>
+        <div id="aiaddition" style="display: none;">AI Integration</div>
+        
+        <div id="menu" style="display: none;">
+            <button onclick="quotes()"  id ="motivation" >Motivational Quotes</button>
+            <div id="quote-box" style="display: none;">
+            <p id="quote"></p>
+            <p id="author"></p>
+            </div>
+            <button onclick="editPrompt()" id="editBtn">Edit Task</button>
+           
+        </div>
+        <button onclick= "hideShow()" id="browse">browse</button>
+        
+     </footer>
+            
+            
+             
+            <div id="taskList"></div>
+           
+           
+    
+    
+</body>
+<script src="script.js"></script>
+</html>
